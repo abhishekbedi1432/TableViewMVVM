@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AboutCell: UITableViewCell {
+class AboutCell: UITableViewCell,ReusableView {
 
     @IBOutlet weak var aboutLabel: UILabel?
     
@@ -20,13 +20,5 @@ class AboutCell: UITableViewCell {
             
             aboutLabel?.text = item.about
         }
-    }
-    
-    static var nib:UINib {
-        return UINib(nibName: identifier, bundle: nil)
-    }
-    
-    static var identifier: String {
-        return String(describing: self)
     }
 }

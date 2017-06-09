@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NamePictureCell: UITableViewCell {
+class NamePictureCell: UITableViewCell, ReusableView {
 
     @IBOutlet weak var nameLabel: UILabel?
     @IBOutlet weak var pictureImageView: UIImageView?
@@ -22,14 +22,6 @@ class NamePictureCell: UITableViewCell {
             nameLabel?.text = item.name
             pictureImageView?.image = UIImage(named: item.pictureUrl)
         }
-    }
-    
-    static var nib:UINib {
-        return UINib(nibName: identifier, bundle: nil)
-    }
-    
-    static var identifier: String {
-        return String(describing: self)
     }
     
     override func awakeFromNib() {
