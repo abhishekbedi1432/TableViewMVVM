@@ -16,6 +16,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableview()
+    }
+    
+    private func setupTableview() {
         
         tableView?.dataSource = viewModel
         
@@ -27,5 +31,6 @@ class ViewController: UIViewController {
         tableView?.register(FriendCell.nib, forCellReuseIdentifier: FriendCell.reuseIdentifier)
         tableView?.register(AttributeCell.nib, forCellReuseIdentifier: AttributeCell.reuseIdentifier)
         tableView?.register(EmailCell.nib, forCellReuseIdentifier: EmailCell.reuseIdentifier)
+        
     }
 }
